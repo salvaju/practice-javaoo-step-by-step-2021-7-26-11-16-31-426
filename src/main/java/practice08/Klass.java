@@ -1,5 +1,7 @@
 package practice08;
 
+import java.text.MessageFormat;
+
 public class Klass {
 
     private int number;
@@ -12,6 +14,11 @@ public class Klass {
     public int getNumber() {
         return number;
     }
+
+    public String getDisplayName() {
+        return MessageFormat.format("Class {0}", number);
+    }
+
 
 
 }
