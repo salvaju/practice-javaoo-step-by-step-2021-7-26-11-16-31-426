@@ -133,16 +133,16 @@ public class Practice10Test {
         assertThat(tom.isTeaching(jerry)).isTrue();
     }
 
-//    @Test
-//    public void should_teacher_isTeaching_return_false_when_the_student_is_not_in_all_the_classes_the_teacher_teaches() throws Exception {
-//        LinkedList<Klass> linkedList = new LinkedList<Klass>();
-//        linkedList.add(klass);
-//        Teacher tom = new Teacher(1, "Tom", 21, linkedList);
-//        Student jerry = new Student(1, "Jerry", 8, new Klass(3));
-//
-//        assertThat(tom.isTeaching(jerry)).isFalse();
-//    }
-//
+    @Test
+    public void should_teacher_isTeaching_return_false_when_the_student_is_not_in_all_the_classes_the_teacher_teaches() throws Exception {
+        LinkedList<Klass> linkedList = new LinkedList<Klass>();
+        linkedList.add(klass);
+        Teacher tom = new Teacher(1, "Tom", 21, linkedList);
+        Student jerry = new Student(1, "Jerry", 8, new Klass(3));
+
+        assertThat(tom.isTeaching(jerry)).isFalse();
+    }
+
 //    @Test
 //    public void should_teacher_introduce_a_student_it_teaches() throws Exception {
 //        LinkedList<Klass> linkedList = new LinkedList<Klass>();
