@@ -40,6 +40,15 @@ public class Teacher extends Person{
 
     public Boolean isTeaching(Student student) {
        return classes.stream()
-                .anyMatch(klass -> klass.equals(klass.isIn(student)));
+                .anyMatch(klass -> klass.getNumber() == klass.isIn(student));
+    }
+
+    public String introduceWith(Student student) {
+
+        if (isTeaching(student)) {
+            return MessageFormat.format("{0} I am a Teacher. I teach {1}.", super.introduce(), student.getName());
+        } else {
+            return super.introduce() + " I am a Teacher. I don't teach " + student.getName() + ".";
+        }
     }
 }
