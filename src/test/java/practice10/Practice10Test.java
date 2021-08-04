@@ -1,31 +1,31 @@
-//package practice10;
-//
-//import org.junit.jupiter.api.BeforeEach;
-//import org.junit.jupiter.api.Test;
-//
-//import java.io.ByteArrayOutputStream;
-//import java.io.PrintStream;
-//import java.util.LinkedList;
-//
-//import static org.assertj.core.api.Assertions.assertThat;
-//
-//public class Practice10Test {
-//    private Klass klass;
-//    private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-//
-//    @BeforeEach
-//    public void setup() {
-//        klass = new Klass(2);
-//        System.setOut(new PrintStream(outContent));
-//    }
-//
-//    @Test
-//    public void should_person_have_id_name_and_age() throws Exception {
-//        Person person = new Person(1, "Tom", 21);
-//        assertThat(person.getName()).isEqualTo("Tom");
-//        assertThat(person.getAge()).isEqualTo(21);
-//    }
-//
+package practice10;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import java.util.LinkedList;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+public class Practice10Test {
+    private Klass klass;
+    private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+
+    @BeforeEach
+    public void setup() {
+        klass = new Klass(2);
+        System.setOut(new PrintStream(outContent));
+    }
+
+    @Test
+    public void should_person_have_id_name_and_age() throws Exception {
+        Person person = new Person(1, "Tom", 21);
+        assertThat(person.getName()).isEqualTo("Tom");
+        assertThat(person.getAge()).isEqualTo(21);
+    }
+
 //    @Test
 //    public void should_person_with_same_id_be_same_one() throws Exception {
 //        Person person1 = new Person(1, "Tom", 21);
@@ -186,4 +186,4 @@
 //
 //        assertThat(systemOut().endsWith("I am Tom. I know Jerry become Leader of Class 2.\n")).isTrue();
 //    }
-//}
+}
