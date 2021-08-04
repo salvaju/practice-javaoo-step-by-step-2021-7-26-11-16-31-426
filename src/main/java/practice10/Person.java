@@ -1,5 +1,6 @@
 package practice10;
 
+import java.text.MessageFormat;
 import java.util.Objects;
 
 public class Person {
@@ -20,6 +21,10 @@ public class Person {
 
     public int getAge() {
         return age;
+    }
+
+    public String introduce(){
+        return MessageFormat.format("My name is {0}. I am {1} years old.", name, age);
     }
 
     @Override
