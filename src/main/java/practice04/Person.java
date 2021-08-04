@@ -18,4 +18,8 @@ public class Person {
         return age;
     }
 
+    public String introduce() {
+        return "My name is "+ getName() +". I am " + getAge() + " years old.";
+    }
+
 }
