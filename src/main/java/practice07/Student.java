@@ -24,6 +24,5 @@ public class Student extends Person{
         } else {
             return MessageFormat.format("{0} I am a Student. I am at Class {1}.", super.introduce(), klass.getNumber());
         }
-
     }
 }
