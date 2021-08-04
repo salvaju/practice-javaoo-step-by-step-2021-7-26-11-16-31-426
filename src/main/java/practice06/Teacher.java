@@ -34,8 +34,8 @@ public class Teacher extends Person{
 
         if (klass.getNumber() == student.getKlass().getNumber()) {
             return MessageFormat.format("{0} I am a Teacher. I teach {1}.", super.introduce(), student.getName());
+        } else {
+            return super.introduce()+ " I am a Teacher. I don't teach " + student.getName() + ".";
         }
-
-        return null;
     }
 }
