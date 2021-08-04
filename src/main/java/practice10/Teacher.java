@@ -13,6 +13,10 @@ public class Teacher extends Person{
         this.classes = classes;
     }
 
+    public Teacher(int id, String name, int age) {
+        super(id, name, age);
+    }
+
     public LinkedList<Klass> getClasses() {
         return classes;
     }
