@@ -40,4 +40,7 @@ public class Klass {
         members.add(student);
     }
 
+    public int isIn(Student student) {
+        return student.getKlass().getNumber();
+    }
 }

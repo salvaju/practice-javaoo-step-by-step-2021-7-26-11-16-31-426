@@ -34,7 +34,11 @@ public class Teacher extends Person{
         } else {
             return MessageFormat.format("{0} I am a Teacher. I teach No Class.", super.introduce());
         }
+    }
 
+    public Boolean isTeaching(Student student) {
+        return classes.stream()
+                .anyMatch(klass -> klass.getNumber() == klass.isIn(student));
     }
 
 
