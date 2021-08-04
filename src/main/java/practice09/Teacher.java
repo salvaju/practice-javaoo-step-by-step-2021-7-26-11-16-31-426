@@ -38,4 +38,8 @@ public class Teacher extends Person{
 
     }
 
+    public Boolean isTeaching(Student student) {
+       return classes.stream()
+                .anyMatch(klass -> klass.equals(klass.isIn(student)));
+    }
 }

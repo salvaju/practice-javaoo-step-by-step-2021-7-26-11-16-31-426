@@ -41,4 +41,8 @@ public class Klass {
         members.add(student);
     }
 
+    public Klass isIn(Student student){
+       return student.getKlass();
+    }
+
 }
