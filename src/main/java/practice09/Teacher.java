@@ -14,6 +14,10 @@ public class Teacher extends Person{
         this.classes = classes;
     }
 
+    public Teacher(int id, String name, int age) {
+        super(id, name, age);
+    }
+
     public LinkedList<Klass> getClasses() {
         return classes;
     }
@@ -21,15 +25,17 @@ public class Teacher extends Person{
     @Override
     public String introduce(){
 
-        if (!classes.isEmpty()) {
+        if (classes != null) {
             String joinedClasses = classes.stream()
                     .map(Klass::getNumber)
                     .map(Object::toString)
                     .collect(Collectors.joining(", "));
 
             return MessageFormat.format("{0} I am a Teacher. I teach Class {1}.", super.introduce(), joinedClasses);
+        } else {
+            return MessageFormat.format("{0} I am a Teacher. I teach No Class.", super.introduce());
         }
-        return null;
+
     }
 
 }
