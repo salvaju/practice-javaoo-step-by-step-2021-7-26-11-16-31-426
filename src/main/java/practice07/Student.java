@@ -18,7 +18,12 @@ public class Student extends Person{
 
     @Override
     public String introduce() {
-        return MessageFormat.format("{0} I am a Student. I am at Class {1}.", super.introduce(), klass.getNumber());
-    }
 
+        if (this.equals(klass.getLeader())) {
+            return MessageFormat.format("{0} I am a Student. I am Leader of Class {1}.", super.introduce(), klass.getNumber());
+        } else {
+            return MessageFormat.format("{0} I am a Student. I am at Class {1}.", super.introduce(), klass.getNumber());
+        }
+
+    }
 }
