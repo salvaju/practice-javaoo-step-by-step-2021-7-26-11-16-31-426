@@ -9,4 +9,8 @@ public class Student extends Person{
         super(id, name, age);
         this.klass = klass;
     }
+
+    public Klass getKlass() {
+        return klass;
+    }
 }
