@@ -33,11 +33,11 @@ public class Practice06Test {
         assertThat(klass.getNumber()).isEqualTo(2);
     }
 
-//    @Test
-//    public void should_class_get_display_name() throws Exception {
-//        assertThat(klass.getDisplayName()).isEqualTo("Class 2");
-//    }
-//
+    @Test
+    public void should_class_get_display_name() throws Exception {
+        assertThat(klass.getDisplayName()).isEqualTo("Class 2");
+    }
+
 //    @Test
 //    public void should_student_have_name_age_and_class_number() throws Exception {
 //        Student tom = new Student("Tom", 21, klass);
