@@ -29,6 +29,10 @@ public class Klass {
 
         if (members.contains(leader)) {
             this.leader = leader;
+            if (teachers != null) {
+                teachers.stream()
+                        .forEach(teacher -> teacher.notifyAssignLeader(this, leader));
+            }
         } else {
             System.out.print("It is not one of us.\n");
         }
