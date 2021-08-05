@@ -11,6 +11,7 @@ public class Teacher extends Person{
     public Teacher(int id, String name, int age, LinkedList<Klass> classes) {
         super(id, name, age);
         this.classes = classes;
+        classes.forEach(klass -> klass.addTeacher(this));
     }
 
     public Teacher(int id, String name, int age) {
@@ -51,4 +52,7 @@ public class Teacher extends Person{
     }
 
 
+    public void notifyStudentJoined(Klass klass, Student student) {
+        System.out.print(MessageFormat.format(("I am {0}. I know {1} has joined Class {2}.\n"), super.getName(), student.getName(), klass.getNumber()));
+    }
 }

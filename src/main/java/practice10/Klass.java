@@ -9,9 +9,11 @@ public class Klass {
     private int number;
     private Student leader;
     private List<Student> members = new ArrayList<>();
+    private List<Teacher> teachers;
 
     public Klass(int number) {
         this.number = number;
+        teachers = new ArrayList<>();
     }
 
     public int getNumber() {
@@ -38,6 +40,13 @@ public class Klass {
 
     public void appendMember(Student student) {
         members.add(student);
+        teachers.stream().forEach(teacher -> teacher.notifyStudentJoined(this, student));
+    }
+
+    public void addTeacher(Teacher teacher) {
+        if (!teachers.contains(teacher)) {
+            teachers.add(teacher);
+        }
     }
 
     public int isIn(Student student) {
